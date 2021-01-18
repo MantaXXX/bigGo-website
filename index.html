@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BigGo 商店</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+    <div class="top-navbar"></div>
+    <div class="biggo-navbar">
+      <a href="">
+        <img src="./header_biggo_logov2@2x.png" alt="bigGO-logo">
+      </a>
+      <form action="">
+        <input type="text" placeholder="輸入搜尋比價...">
+        <a href="" class="fas fa-search"> </a>
+      </form>
+
+    </div>
+    </div>
+  </nav>
+  <header>
+    <div id="banner">
+      <div class="title">
+        <h2>所有商店</h2>
+        <p>台灣大型綜合商店商品比價、優惠、折扣碼、活動預告，貨比多家買到最省！</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="storeContainer" @click="modal">
+      <div class="storeSearch" @click="modal">
+        <div id="storeAmount">
+          <h5>{{ search }} 共有 {{ storesAmount }} 間商店</h5>
+        </div>
+        <form>
+          <i href="" class="fas fa-search"></i>
+          <input type="text" placeholder="輸入搜尋商店" v-model="search">
+          <a class="fas fa-times" @click="clearSearch" v-show="clearBtn"></a>
+          <div class="suggestion" v-show="suggestion" :style="height">
+            <template v-for="line in suggestedKeyword">
+              <p class="modal" @click="chooseStore(line)"> {{ line.item.name }} </p>
+            </template>
+          </div>
+        </form>
+      </div>
+      <div class="store-list">
+        <div id="store-card" v-for="store in displayStores">
+          <img :src="store.detail.image" alt="">
+          <div class="store-name">
+            <h6>{{ store.item.name }}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src=" https://unpkg.com/vue@next"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

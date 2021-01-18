@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: rgb(233, 245, 255);
+}
+nav .top-navbar {
+  background-color: rgb(211, 214, 218);
+  width: 100%;
+  height: 4vh;
+}
+nav .biggo-navbar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+nav .biggo-navbar img {
+  padding-left: 20px;
+  height: 34px;
+}
+nav .biggo-navbar form {
+  width: 50%;
+  height: 34px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+nav .biggo-navbar form input {
+  padding-left: 5px;
+  height: 100%;
+  width: 80%;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid rgb(255, 255, 255);
+  font-size: 1em;
+}
+nav .biggo-navbar form a {
+  width: 34px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+  background-color: rgb(132, 132, 132);
+  color: rgb(255, 255, 255);
+}
+nav .biggo-navbar form a:hover {
+  color: rgb(141, 241, 243);
+}
+header #banner {
+  width: 100%;
+  height: 21vh;
+  background-image: url(/title_img_store_all@2x.png);
+  background-repeat: no-repeat;
+  background-size: 100% 150px;
+  background-color: rgb(124, 207, 202);
+}
+header #banner .title {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  padding-left: 54px;
+}
+header #banner .title p{
+  margin-top: 5px;
+  width: 34%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+main #storeContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+main #storeContainer .storeSearch {
+  display: flex;
+  width: 80%;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+main #storeContainer .storeSearch #storeAmount{
+  margin-left: 1%;
+}
+main #storeContainer .storeSearch form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  position: relative;
+}
+main #storeContainer .storeSearch input {
+  height: 34px;
+  width: 100%;
+  border: 1px solid rgb(246, 246, 246);
+  border-radius: 50px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+  padding-left: 30px;
+  font-size: 1em;
+  outline: none;
+}
+main #storeContainer .storeSearch .suggestion {
+  position: absolute;
+  background-color: rgb(151, 237, 226, 0.9);
+  top: 34px;
+  width: 100%;
+  line-height: 1em;
+  overflow: scroll;
+}
+main #storeContainer .storeSearch .suggestion p {
+  padding: 2px 0 2px 30px;
+}
+main #storeContainer .storeSearch .suggestion p:hover {
+  background-color: rgba(255, 236, 209, 0.7);
+}
+main #storeContainer .storeSearch i {
+  position: absolute;
+  left: 10px;
+}
+main #storeContainer .storeSearch a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  color: rgb(66, 64, 64);
+  background-color: rgb(134, 132, 132);
+  border-radius: 50%;
+}
+main #storeContainer .storeSearch a:hover {
+  cursor: pointer;
+  color: rgba(191, 23, 23, 0.805);
+}
+main #storeContainer .store-list {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+}
+main #storeContainer .store-list #store-card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 18%;
+  height: 120px;
+  margin: 5px 1% 15px 1%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+main #storeContainer .store-list #store-card:hover {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+}
+main #storeContainer .store-list #store-card img{
+  width: 100%;
+  height: 70%;
+  margin-bottom: 7px;
+}
